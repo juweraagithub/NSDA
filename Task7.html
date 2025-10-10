@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Status Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f2f5;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    h2{
+        color: rgb(68, 68, 149);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Check Your Task Status</h2>
+    <input type="text" id="taskInput" placeholder="Enter yes or no">
+    <button onclick="checkTask()">Check Status</button>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function checkTask() {
+      let taskStatus = document.getElementById("taskInput").value.toLowerCase();
+      let message = document.getElementById("message");
+      if (taskStatus === "yes") {
+        message.textContent = "🎉 Great job! You've completed your task!";
+        message.style.color = "green";
+      } else if (taskStatus === "no") {
+        message.textContent = "🕒 Keep going! You can do it — stay focused and finish your task!";
+        message.style.color = "orange";
+      } else {
+        message.textContent = "❓ Please enter a valid response: 'yes' or 'no'.";
+        message.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
