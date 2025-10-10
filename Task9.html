@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NSDA Beginner's Todo List</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="todo-list">
+    <h1>NSDA Beginner's Task List</h1>
+
+    <input class="task" id="newTask" placeholder="Enter a new task">
+    <button class="done-btn" onclick="addTask()">Add Task</button>
+
+    <div id="taskContainer"></div>
+</div>
+
+<script>
+let tasks = [];
+
+function addTask() {
+    const input = document.getElementById('newTask');
+    const val = input.value.trim();
+    if (!val) return;
+    tasks.push({ text: val, done: false });
+    input.value = '';
+    showTasks();
+}
+
+function showTasks() {
+    const container = document.getElementById('taskContainer');
+    container.innerHTML = '';
+    tasks.forEach((task, i) => {
+        const div = document.createElement('div');
+        div.className = 'task-group';
+
+        const taskInput = document.createElement('input');
+        taskInput.className = 'task' + (task.done ? ' done' : '');
+        taskInput.value = task.text;
+
+        const btn = document.createElement('button');
+        btn.className = 'done-btn';
+        btn.textContent = 'Done';
+        btn.onclick = () => {
+            task.done = !task.done;
+            showTasks();
+        };
+
+        div.append(taskInput, btn);
+        container.appendChild(div);
+    });
+}
+</script>
+
+<style>
+body { 
+    background:#f5f7fa; 
+    font-family:'Roboto',sans-serif; 
+    display:flex; 
+    justify-content:center; 
+    padding:20px; 
+}
+.todo-list { 
+    background:#fff; 
+    padding:30px; 
+    border-radius:12px; 
+    width:380px; 
+    box-shadow:0 5px 25px rgba(0,0,0,0.1); 
+}
+h1 { 
+    text-align:center; 
+    color:#1e88e5; 
+    margin-bottom:20px; 
+}
+.task-group { 
+    display:flex; 
+    justify-content:space-between; 
+    margin-bottom:10px; 
+}
+.task { 
+    width:65%; 
+    padding:8px; 
+    border-radius:6px; 
+    border:1px solid #d0d0d0; 
+}
+.done-btn { 
+    background:#1e88e5; 
+    color:#fff; 
+    border:none; 
+    border-radius:6px; 
+    padding:8px 12px; 
+    cursor:pointer; 
+}
+.done { 
+    text-decoration:line-through; 
+    color:gray; 
+}
+</style>
+</body>
+</html>
