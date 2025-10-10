@@ -1,156 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSDA Beginner's Todo List</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f7fa;
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            padding-top: 50px;
-        }
-
-        .todo-list {
-            background-color: #ffffff;
-            padding: 40px 50px;
-            border-radius: 12px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            width: 380px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #1e88e5;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
-        }
-
-        .task-group {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-
-        .task {
-            width: 65%;
-            padding: 8px;
-            border-radius: 6px;
-            border: 1px solid #d0d0d0;
-            font-size: 14px;
-        }
-
-        .done-btn {
-            background-color: #1e88e5;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-size: 13px;
-            transition: background 0.3s;
-        }
-
-        .done-btn:hover {
-            background-color: #1565c0;
-        }
-
-        .certificate-btn {
-            width: 100%;
-            margin-top: 25px;
-            background-color: #2e7d32;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: background 0.3s;
-        }
-
-        .certificate-btn:hover {
-            background-color: #1b5e20;
-        }
-
-        .certificate-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: white;
-        }
-    </style>
+    <title>NSDA Beginner's Task List</title>
 </head>
 <body>
-    <div class="todo-list">
-        <h1>NSDA Beginner's Task List</h1>
 
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 1">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 2">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 3">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 4">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 5">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 6">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 7">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 8">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 9">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 10">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Enter Task 11">
-            <button class="done-btn">Done</button>
-        </div>
-        <div class="task-group">
-            <input class="task" type="text" placeholder="Final Project">
-            <button class="done-btn">Done</button>
-        </div>
+    <h1>NSDA Beginner's Task List</h1>
 
-        <button class="certificate-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                <path d="M8 0a5 5 0 0 0-5 5c0 1.657.895 3.099 2.223 3.875A2.999 2.999 0 0 0 4 11v4l2.5-1.5L9 15v-4a3 3 0 0 0-1.223-2.125A4.978 4.978 0 0 0 13 5a5 5 0 0 0-5-5z"/>
-            </svg>
-            Get the Certificate
-        </button>
-    </div>
+    <form>
+
+        <p>
+            <label>Task 1: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 2: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 3: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 4: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 5: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 6: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 7: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 8: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 9: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 10: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Task 11: </label>
+            <input type="text" placeholder="Enter your task">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <label>Final Project: </label>
+            <input type="text" placeholder="Describe your final project">
+            <input type="submit" value="Done">
+        </p>
+
+        <p>
+            <input type="submit" value="Get the Certificate">
+        </p>
+
+    </form>
+
 </body>
 </html>
