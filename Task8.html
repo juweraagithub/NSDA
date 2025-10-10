@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Todo List</title>
+</head>
+<body>
+  <h1>Basic Todo List (Console Version)</h1>
+
+  <script>
+    let tasks = [];
+    let numberOfTasks = parseInt(prompt("How many tasks do you want to add?"));
+
+    for (let i = 0; i < numberOfTasks; i++) {
+      let task = prompt(`Enter task ${i + 1}:`);
+      tasks.push(task);
+    }
+
+    console.log("Your Tasks:");
+    for (let i = 0; i < tasks.length; i++) {
+      console.log(`${i + 1}. ${tasks[i]}`);
+    }
+  </script>
+</body>
+</html>
